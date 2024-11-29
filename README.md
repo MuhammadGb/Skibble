@@ -52,7 +52,7 @@
 
 - **Frontend**: React, Next.js, Tailwind CSS, Flowbite
 - **Backend**: Supabase , Next.js
-- **State Management**: Redux Toolkit
+- **State Management**: Context API
 - **Testing**: React Testing Library, Jest
 
 ---

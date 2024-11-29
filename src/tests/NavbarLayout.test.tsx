@@ -16,7 +16,6 @@ describe("NavbarLayout", () => {
 
   beforeEach(() => {
     jest.clearAllMocks();
-    // Mock the context values provided by useCart
     (useCart as jest.Mock).mockReturnValue({
       setIsOpen: mockSetIsOpen,
       cartItems: [],
@@ -32,16 +31,13 @@ describe("NavbarLayout", () => {
       />
     );
 
-    // Check for the logo
     expect(screen.getByLabelText("Go to homepage")).toBeInTheDocument();
 
-    // Check for the search input
     const searchInput = screen.getByPlaceholderText(
       "Search for names and categories of products..."
     );
     expect(searchInput).toBeInTheDocument();
 
-    // Check for the cart button
     const cartButton = screen.getByLabelText("View cart");
     expect(cartButton).toBeInTheDocument();
   });

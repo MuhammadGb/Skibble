@@ -3,7 +3,6 @@ import React from "react";
 import CartComponent from "@/component/Cart";
 import { useCart } from "@/globals/CartProvider";
 
-// Mock the `useCart` hook
 jest.mock("../globals/CartProvider", () => ({
   useCart: jest.fn(),
 }));
@@ -18,7 +17,6 @@ describe("CartComponent Tests", () => {
   });
 
   it("displays an empty cart message when there are no items", () => {
-    // Mock context return value for an empty cart
     (useCart as jest.Mock).mockReturnValue({
       isOpen: true,
       setIsOpen: mockSetIsOpen,
@@ -55,13 +53,10 @@ describe("CartComponent Tests", () => {
 
     render(<CartComponent />);
 
-    // Verify initial item display
     expect(screen.getByText("Product A")).toBeInTheDocument();
 
-    // Simulate click on the trash icon
     fireEvent.click(screen.getByLabelText("Remove item"));
 
-    // Expect `handleRemoveFromCart` to have been called
     expect(mockHandleRemoveFromCart).toHaveBeenCalledWith(1);
   });
 
@@ -89,10 +84,8 @@ describe("CartComponent Tests", () => {
 
     render(<CartComponent />);
 
-    // Verify initial quantity
     expect(screen.getByText("1")).toBeInTheDocument();
 
-    // Click the increment button
     fireEvent.click(screen.getByLabelText("Add to item quantity"));
     expect(mockHandleAddToCart).toHaveBeenCalledWith({
       id: 1,
@@ -104,7 +97,6 @@ describe("CartComponent Tests", () => {
       quantity: 1,
     });
 
-    // Click the decrement button
     fireEvent.click(screen.getByLabelText("Subtract from item quantity"));
     expect(mockHandleRemoveFromCart).toHaveBeenCalledWith(1);
   });
@@ -123,7 +115,7 @@ describe("CartComponent Tests", () => {
           description: "Product C",
           category: "accessories",
           image: "/img-c.jpg",
-          quantity: 5, // At the limit
+          quantity: 5,
         },
       ],
       setCartItems: mockSetCartItems,
@@ -133,13 +125,10 @@ describe("CartComponent Tests", () => {
 
     render(<CartComponent />);
 
-    // Verify initial quantity is at the limit
     expect(screen.getByText("5")).toBeInTheDocument();
 
-    // Attempt to increment beyond the limit
     fireEvent.click(screen.getByLabelText("Add to item quantity"));
 
-    // Verify `handleAddToCart` is not called
     expect(mockHandleAddToCart).not.toHaveBeenCalled();
   });
 });

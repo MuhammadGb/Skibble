@@ -21,7 +21,6 @@ export default function ProductCard({ product }: ProductCardProps) {
   const [imageLoaded, setImageLoaded] = useState(false);
   const inCart = cartItems && cartItems.find((item) => item.id === product?.id);
 
-  // Cache the discount value for each product
   const discountPrice = useMemo(() => {
     const discountGenerator = (price: number) => {
       const discount = Math.floor(Math.random() * 31);

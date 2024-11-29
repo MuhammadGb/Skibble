@@ -25,6 +25,33 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=5"
+        />
+
+        <link rel="shortcut icon" href={"/images/logo.png"} />
+        <meta name="Shop Ease" content="ShopEase - Your One-Stop Shop" />
+        <meta name="msapplication-TileColor" content="#000000" />
+        <meta
+          name="theme-color"
+          media="(prefers-color-scheme: light)"
+          content="#fff"
+        />
+        {/* google font css */}
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href={`https://fonts.googleapis.com/css2?family=${geistSans}${
+            geistSans ? "&family=" + geistSans : ""
+          }&display=swap`}
+          rel="stylesheet"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

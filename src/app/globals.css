@@ -2,26 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@layer base {
+  .navbar-link:hover path {
+    transition: stroke 0.3s ease, path 0.3s ease;
+  }
+
+  .navbar-link:hover path {
+    stroke: white;
+  }
+
+  .navbar-link:hover .fill-svgs path {
+    fill: white;
+  }
+
+  .shadow--absent {
+    box-shadow: 0px 3.6526315212249756px 13.697368621826172px 0px #ff706f;
+  }
+  .shadow--available {
+    box-shadow: 0px 3.6526315212249756px 13.697368621826172px 0px #79cfa6;
+  }
+  .card-shadow {
+    box-shadow: 0px 4px 4px 0px #21252940;
+  }
+
+  /* Custom scrollbar-hide class */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  @variants responsive {
+    /* Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
 }

@@ -1,6 +1,6 @@
-# E-Commerce Platform
+# Shop Ease E-Commerce Platform
 
-**Shop Ease** isa modern and responsive web application for online shopping. It has advanced functionalities such as SEO optimization, search, filtering, pagination, and cart management.
+**Shop Ease** is a modern and responsive web application for online shopping. It has advanced functionalities such as SEO optimization, search, filtering, pagination, and cart management.
 
 ---
 

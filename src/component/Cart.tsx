@@ -2,7 +2,6 @@
 
 import { CartItem } from "@/app/Home";
 import { Button, Drawer } from "flowbite-react";
-import { Dispatch, SetStateAction } from "react";
 import { BiCart, BiMinus } from "react-icons/bi";
 import { FaTrash } from "react-icons/fa";
 import { PiPlus } from "react-icons/pi";

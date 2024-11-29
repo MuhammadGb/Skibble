@@ -2,9 +2,8 @@
 import { Dispatch, SetStateAction } from "react";
 import React from "react";
 import { Navbar, Button } from "flowbite-react";
-import { FiShoppingCart, FiSearch, FiUser } from "react-icons/fi";
+import { FiShoppingCart, FiSearch } from "react-icons/fi";
 import { BiLogo500Px } from "react-icons/bi";
-import { CartItem } from "@/app/Home";
 import { useCart } from "@/globals/CartProvider";
 
 type NavbarPropType = {

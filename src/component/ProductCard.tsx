@@ -1,7 +1,6 @@
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import { Button } from "flowbite-react";
-import { CartItem } from "@/app/Home";
 import { useCart } from "@/globals/CartProvider";
 
 type Product = {

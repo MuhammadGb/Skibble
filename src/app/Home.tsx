@@ -3,7 +3,6 @@ import CartComponent from "@/component/Cart";
 import FooterLayout from "@/component/Footer";
 import NavbarLayout from "@/component/Navbar";
 import Products from "@/component/Products";
-import SeoMeta from "@/globals/SeoMeta";
 import { useState, useEffect } from "react";
 
 export type ProductType = {

@@ -2,7 +2,7 @@
 
 import { useState, useMemo, Dispatch, SetStateAction } from "react";
 import ProductCard from "./ProductCard";
-import { CartItem, ProductType } from "@/app/Home";
+import { ProductType } from "@/app/Home";
 import { Button, Pagination, Spinner } from "flowbite-react";
 import EmptyState from "./EmptyState";
 

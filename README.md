@@ -1,6 +1,6 @@
 # E-Commerce Platform
 
-Welcome to the **E-Commerce Platform**, a modern and responsive web application for online shopping. This project leverages cutting-edge technologies to deliver a seamless user experience, complete with advanced functionality such as SEO optimization, search, filtering, pagination, and cart management.
+**Shop Ease** isa modern and responsive web application for online shopping. It has advanced functionalities such as SEO optimization, search, filtering, pagination, and cart management.
 
 ---
 
@@ -51,10 +51,9 @@ Welcome to the **E-Commerce Platform**, a modern and responsive web application 
 ## 🛠️ Technologies Used
 
 - **Frontend**: React, Next.js, Tailwind CSS, Flowbite
-- **Backend**: Supabase (as the backend server)
+- **Backend**: Supabase , Next.js
 - **State Management**: Redux Toolkit
 - **Testing**: React Testing Library, Jest
-- **Charts**: ApexCharts (for data visualization in modals)
 
 ---
 

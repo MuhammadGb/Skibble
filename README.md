@@ -22,7 +22,7 @@
    Add, update, or remove items from the cart. View cart totals and proceed to checkout.
 
 6. **Footer with Social Media Icons**  
-   Links to Facebook, Twitter, and Instagram are included for social media engagement. _(Some links may be placeholders and require further integration.)_
+   Links to Facebook, Twitter, and Instagram are included for social media engagement. _(Most of the links are just placeholders now.)_
 
 ---
 

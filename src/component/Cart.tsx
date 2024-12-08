@@ -15,7 +15,7 @@ export default function CartComponent() {
 
   const increaseQuantity = (id: number) => {
     setCartItems((prevItems) =>
-      prevItems.map((item) =>
+      prevItems?.map((item) =>
         item.id === id && item.quantity < 5
           ? { ...item, quantity: item.quantity + 1 }
           : item
@@ -29,7 +29,7 @@ export default function CartComponent() {
     setCartItems(
       (prevItems) =>
         prevItems
-          .map((item) =>
+          ?.map((item) =>
             item.id === id
               ? item.quantity > 1
                 ? { ...item, quantity: item.quantity - 1 }
@@ -56,14 +56,17 @@ export default function CartComponent() {
       position="right"
       className="xl:w-1/3 lg:w-1/2 md:w-2/3 sm:w-3/4"
     >
-      <Drawer.Header title={`My Cart (${cartItems.length})`} titleIcon={BiCart}>
+      <Drawer.Header
+        title={`My Cart (${cartItems?.length})`}
+        titleIcon={BiCart}
+      >
         {" "}
       </Drawer.Header>
       <div className="p-4">
-        {cartItems.length > 0 ? (
+        {cartItems?.length > 0 ? (
           <>
             <div className="space-y-4 min-h-[60vh]">
-              {cartItems.map((item) => (
+              {cartItems?.map((item) => (
                 <div
                   key={item.id}
                   className="flex items-center justify-between py-2 border-b"

@@ -73,7 +73,7 @@ export default function Products(props: ProductPropType) {
             Filter by Categories
           </option>
           <option value="">All Categories</option>
-          {[...new Set(data?.map((product) => product?.category))].map(
+          {[...new Set(data?.map((product) => product?.category))]?.map(
             (category) => (
               <option key={category} value={category}>
                 {category}
@@ -112,13 +112,13 @@ export default function Products(props: ProductPropType) {
               <span className="font-semibold ">$0</span>
               <span className="font-semibold ">-</span>
               <span className="font-semibold ">
-                ${priceRange?.slice(1, priceRange.length) || 0}
+                ${priceRange?.slice(1, priceRange?.length) || 0}
               </span>
             </div>
           </div>
         </div>
       </div>
-      {filteredProducts.length && !loading ? (
+      {filteredProducts?.length && !loading ? (
         <div className="flex flex-wrap justify-start w-full gap-12 px-8 py-4 mb-6 bg-gray-100">
           {filteredProducts?.map((product) => (
             <ProductCard key={product?.id} product={product} />
@@ -128,28 +128,32 @@ export default function Products(props: ProductPropType) {
         <div className="flex items-center justify-center w-screen h-[30vh]">
           <Spinner aria-label="Loading indicator" size="xl" />
         </div>
-      ) : !filteredProducts.length && !loading ? (
+      ) : !filteredProducts?.length && !loading ? (
         <EmptyState />
       ) : (
         ""
       )}
-      <div className="flex items-end justify-end gap-4 mx-6">
-        <div className="text-sm font-semibold text-gray-500">
-          Showing {(page - 1) * perPage + 1} to{" "}
-          {page < Math.ceil(count / perPage)
-            ? filteredProducts.length * page
-            : count}{" "}
-          of {count} Entries
+      {filteredProducts?.length ? (
+        <div className="flex items-end justify-end gap-4 mx-6">
+          <div className="text-sm font-semibold text-gray-500">
+            Showing {(page - 1) * perPage + 1} to{" "}
+            {page < Math.ceil(count / perPage)
+              ? filteredProducts?.length * page
+              : count}{" "}
+            of {count} Entries
+          </div>
+          <Pagination
+            layout="pagination"
+            className="flex items-end justify-end "
+            currentPage={page}
+            totalPages={Math.ceil(count / perPage)}
+            showIcons
+            onPageChange={onPageChange}
+          />
         </div>
-        <Pagination
-          layout="pagination"
-          className="flex items-end justify-end "
-          currentPage={page}
-          totalPages={Math.ceil(count / perPage)}
-          showIcons
-          onPageChange={onPageChange}
-        />
-      </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 }

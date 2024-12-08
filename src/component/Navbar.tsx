@@ -74,11 +74,11 @@ const NavbarLayout = (props: NavbarPropType) => {
                 className="absolute top-0 right-0 px-1 text-xs font-bold text-white bg-red-500 rounded-full"
                 aria-live="polite"
               >
-                {cartItems.length < 1
+                {cartItems?.length < 1
                   ? ""
-                  : cartItems.length > 9
+                  : cartItems?.length > 9
                   ? "9+"
-                  : cartItems.length}
+                  : cartItems?.length}
               </span>
             </div>
           </div>

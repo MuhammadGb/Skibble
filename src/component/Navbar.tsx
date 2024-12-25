@@ -46,7 +46,10 @@ const NavbarLayout = () => {
                   className="w-full "
                   aria-label="Search for products"
                 />
-                <FiSearch aria-hidden="true" />
+                <FiSearch
+                  aria-hidden="true"
+                  onClick={() => setToglSearch(false)}
+                />
               </div>
             ) : (
               <GoSearch className="text-[1.5rem] cursor-pointer" />

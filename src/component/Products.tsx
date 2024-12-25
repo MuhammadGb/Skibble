@@ -133,8 +133,8 @@ export default function Products() {
                 Access recipes on the Skibble App
               </h2>
               <p className="text-[#919BA3] sm:text-[14px] xl:text-[14px] text-[12px] lg:text-[12px]">
-                Don't miss out on your favorite store's secret recipes, endless
-                food content, busy food communities and more.
+                Don&apos;t miss out on your favorite store&apos;s secret
+                recipes, endless food content, busy food communities and more.
               </p>
             </div>
             <div className="bg-[#00BF6D] whitespace-nowrap px-3 py-1 rounded-full hidden md:flex items-center h-fit justify-center">
@@ -187,7 +187,6 @@ export function TabComponent() {
 }
 
 const MainContent = () => {
-  const [activeNav, setActiveNav] = useState("");
   return (
     <div className="flex">
       {" "}

@@ -4,9 +4,7 @@ import { useState } from "react";
 import {
   Button,
   Clipboard,
-  Pagination,
   Select,
-  Spinner,
   Tooltip,
 } from "flowbite-react";
 import Image from "next/image";

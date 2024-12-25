@@ -4,9 +4,6 @@ import NavbarLayout from "@/component/Navbar";
 import Products from "@/component/Products";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import TwSizeIndicator from "./TwSizeIndicator";
-import { Avatar } from "flowbite-react";
-import { FaCircle } from "react-icons/fa";
 
 export type ProductType = {
   id: number;
@@ -98,7 +95,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <TwSizeIndicator />
     </>
   );
 }

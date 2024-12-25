@@ -1,8 +1,5 @@
 import React from "react";
 import { Button, Footer } from "flowbite-react";
-import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
-import { BiLogo500Px } from "react-icons/bi";
-import Image from "next/image";
 
 const FooterLayout = () => {
   return (

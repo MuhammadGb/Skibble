@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, Dispatch, SetStateAction } from "react";
+import { useState } from "react";
 import {
   Button,
   Clipboard,
@@ -9,8 +9,6 @@ import {
   Spinner,
   Tooltip,
 } from "flowbite-react";
-import EmptyState from "./EmptyState";
-import { FaCircle } from "react-icons/fa";
 import Image from "next/image";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import {

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import React from "react";
-import { Navbar, Button } from "flowbite-react";
+import { Navbar } from "flowbite-react";
 import { FiShoppingCart, FiSearch } from "react-icons/fi";
 import Image from "next/image";
 import { GoSearch } from "react-icons/go";

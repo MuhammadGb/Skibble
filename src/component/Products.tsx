@@ -1,12 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import {
-  Button,
-  Clipboard,
-  Select,
-  Tooltip,
-} from "flowbite-react";
+import { Clipboard, Select, Tooltip } from "flowbite-react";
 import Image from "next/image";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import {

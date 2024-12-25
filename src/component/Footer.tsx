@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Footer } from "flowbite-react";
+import { Footer } from "flowbite-react";
 
 const FooterLayout = () => {
   return (

@@ -3,7 +3,7 @@ import FooterLayout from "@/component/Footer";
 import NavbarLayout from "@/component/Navbar";
 import Products from "@/component/Products";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 export default function Home() {
   useEffect(() => {

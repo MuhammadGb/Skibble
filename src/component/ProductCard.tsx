@@ -1,7 +1,6 @@
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import { Button } from "flowbite-react";
-import { useCart } from "@/globals/CartProvider";
 
 type Product = {
   id: number;
@@ -17,9 +16,7 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
-  const { cartItems, handleAddToCart, handleRemoveFromCart } = useCart();
   const [imageLoaded, setImageLoaded] = useState(false);
-  const inCart = cartItems && cartItems.find((item) => item.id === product?.id);
 
   const discountPrice = useMemo(() => {
     const discountGenerator = (price: number) => {
@@ -79,24 +76,9 @@ export default function ProductCard({ product }: ProductCardProps) {
             ${Number(product?.price)}
           </p>
         </div>
-        {inCart ? (
-          <Button
-            color="failure"
-            onClick={() => handleRemoveFromCart(product?.id)}
-            aria-label={`Remove ${product?.name} from cart`}
-            tabIndex={0}
-          >
-            Remove from Cart
-          </Button>
-        ) : (
-          <Button
-            onClick={() => handleAddToCart(product)}
-            aria-label={`Add ${product?.name} to cart`}
-            tabIndex={0}
-          >
-            Add to Cart
-          </Button>
-        )}
+        <Button aria-label={`Add ${product?.name} to cart`} tabIndex={0}>
+          Add to Cart
+        </Button>
       </div>
     </div>
   );

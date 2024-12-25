@@ -21,11 +21,11 @@ const SeoMeta = ({
 }: SeoMetaProps) => {
   const pathname = usePathname();
 
-  const defaultTitle = "ShopEase - Your One-Stop Shop";
+  const defaultTitle = "Kitchen - Your One-Stop Shop";
   const defaultDescription = "Find the best products at unbeatable prices.";
-  const defaultAuthor = "ShopEase Team";
+  const defaultAuthor = "Kitchen Team";
   const defaultImage = "/images/default-meta-image.jpg";
-  const baseUrl = "https://www.shopease.com";
+  const baseUrl = "https://www.Kitchen.com";
 
   const pageTitle = meta_title || title || defaultTitle;
   const pageDescription = description || defaultDescription;

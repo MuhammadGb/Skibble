@@ -1,18 +1,12 @@
 import React from "react";
 import Home from "./Home";
-import SeoMeta from "@/globals/SeoMeta";
-import { CartProvider } from "@/globals/CartProvider";
+import SeoMeta from "../globals/SeoMeta";
 
 const page = () => {
   return (
     <>
-      <CartProvider>
-        <SeoMeta
-          title="Home"
-          meta_title="ShopEase - Online Shopping Made Easy"
-        />
-        <Home />
-      </CartProvider>
+      <SeoMeta title="Home" meta_title="Kitchen - Online Shopping Made Easy" />
+      <Home />
     </>
   );
 };

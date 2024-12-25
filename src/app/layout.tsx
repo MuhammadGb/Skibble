@@ -32,7 +32,7 @@ export default function RootLayout({
         />
 
         <link rel="shortcut icon" href={"/images/logo.png"} />
-        <meta name="Shop Ease" content="ShopEase - Your One-Stop Shop" />
+        <meta name="Kitchens" content="Kitchen - Your One-Stop Shop" />
         <meta name="msapplication-TileColor" content="#000000" />
         <meta
           name="theme-color"

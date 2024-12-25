@@ -5,28 +5,7 @@ import Products from "@/component/Products";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-export type ProductType = {
-  id: number;
-  name: string;
-  price: number;
-  description: string;
-  category: string;
-  image: string;
-};
-
-export type CartItem = ProductType & {
-  quantity: number;
-};
-
 export default function Home() {
-  const [page, setPage] = useState<number>(1);
-  const [perPage, setPerPage] = useState<number>(15);
-  const [count, setCount] = useState<number>(1);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [query, setQuery] = useState("");
-  const [products, setProducts] = useState<ProductType[]>([]);
-  const [filteredProducts, setFilteredProducts] = useState<ProductType[]>([]);
-
   useEffect(() => {
     document.title = "Kitchen - Online Shopping Made Easy";
   }, []);

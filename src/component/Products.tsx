@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useMemo, Dispatch, SetStateAction } from "react";
-import { ProductType } from "@/app/Home";
 import {
   Button,
   Clipboard,
@@ -32,16 +31,6 @@ import {
 import { HiFilter } from "react-icons/hi";
 
 //
-
-type ProductPropType = {
-  data: ProductType[];
-  count: number;
-  page: number;
-  loading: boolean;
-  setPage: Dispatch<SetStateAction<number>>;
-  perPage: number;
-  setPerPage: Dispatch<SetStateAction<number>>;
-};
 
 export default function Products() {
   const [collapse, setCollapse] = useState(false);
